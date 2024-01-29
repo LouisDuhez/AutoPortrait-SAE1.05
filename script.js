@@ -118,9 +118,11 @@ envoyerForm.addEventListener("click", function(event){
 
 })
 // ici on envoie les informations collectés à l'API pour ensuite les stocker.
-let urlVisitee = "https://perso-etudiant.u-pem.fr/~gambette/portrait/api.php?format=json&login=louis.duhez&courriel=philippe.gambette@u-pem.fr&message=Si j'étais "+analogiesKey+ "Je serais" +valeurKey+"explication:"+explicationKey+"lien image :"+imageKey 
 let submit=document.querySelector("#submit")
+
+
 submit.addEventListener("click", function(event){
+let urlVisitee = "https://perso-etudiant.u-pem.fr/~gambette/portrait/api.php?format=json&login=louis.duhez&courriel=philippe.gambette@u-pem.fr&message=Si j'étais "+analogiesKey+ "Je serais" +valeurKey+"explication:"+explicationKey+"lien image :"+imageKey 
     fetch(urlVisitee).then(function(response){
         response.json().then(function(data){
             console.log("Réponse reçue : ")
